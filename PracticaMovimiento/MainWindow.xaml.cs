@@ -12,94 +12,82 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
-//Librerías para multiprocesamiento
 using System.Threading;
 using System.Diagnostics;
+using System.Windows.Threading;
+
 
 namespace PracticaMovimiento
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
+   
     public partial class MainWindow : Window
     {
 
         Stopwatch stopwatch;
         TimeSpan tiempoAnterior;
+    
+        /// Jugador //
+        Jugador player;
+        ///         ///
+        /// Enemigos //        
+        Enemigo enemigo1;
+        ///         ///
+        /// Tiles   // 
+        Tile tiles1;
+        Tile tiles2;
+        Tile tiles3;
+        ///         ///
+
+
+
 
         enum EstadoJuego { Gameplay, Gameover };
         EstadoJuego estadoActual = EstadoJuego.Gameplay;
 
-        enum Direccion { Arriba, Abajo, Izquierda, Derecha, Ninguna };
-        Direccion direccionJugador = Direccion.Ninguna;
 
-        double velocidadRana = 80;
+
+        List<Enemigo> enemigos = new List<Enemigo>();
+
+        List<Tile> tiles = new List<Tile>();
 
         public MainWindow()
         {
             
             InitializeComponent();
-            miCanvas.Focus();
+            canvasPrincipal.Focus();
 
             stopwatch = new Stopwatch();
             stopwatch.Start();
             tiempoAnterior = stopwatch.Elapsed;
 
-            //1.- Establecer instrucciones
+
+            player = new Jugador(rectjugador);
+            
+
+            enemigo1 = new Enemigo(rectenemigo);
+
+            tiles1 = new Tile(tile1);
+            tiles2 = new Tile(tile2);
+            tiles3 = new Tile(tile3);
+
+            enemigos.Add(enemigo1);
+            tiles.Add(tiles1);
+            tiles.Add(tiles2);
+            tiles.Add(tiles3);
+
             ThreadStart threadStart =
                 new ThreadStart(actualizar);
-            //2.- Inicializar el Thread
+          
             Thread threadMoverEnemigos =
                 new Thread(threadStart);
-            //3.- Ejecutar el Thread
+
             threadMoverEnemigos.Start();
 
-            /*imgRana.RenderTransform =
-                new RotateTransform(90);*/
+           
             
         }
 
-        void moverJugador(TimeSpan deltaTime)
-        {
-            double topRanaActual = Canvas.GetTop(imgRana);
-            double leftRanaActual = Canvas.GetLeft(imgRana);
-            switch (direccionJugador)
-            {
-                case Direccion.Arriba:
-                    Canvas.SetTop(imgRana, 
-                        topRanaActual - (velocidadRana * deltaTime.TotalSeconds));
-                    break;
-                case Direccion.Abajo:
-                    Canvas.SetTop(imgRana,
-                        topRanaActual + (velocidadRana * deltaTime.TotalSeconds));
-                    break;
-                case Direccion.Izquierda:
-                    if (leftRanaActual - 
-                        (velocidadRana * deltaTime.TotalSeconds) >= 0)
-                    {
-                        Canvas.SetLeft(imgRana,
-                        leftRanaActual - 
-                        (velocidadRana * deltaTime.TotalSeconds));
-                    }
-                    
-                    break;
-                case Direccion.Derecha:
-                    double nuevaPosicion = leftRanaActual + 
-                        (velocidadRana * deltaTime.TotalSeconds);
-                    if (nuevaPosicion + imgRana.Width <= 800)
-                    {
-                        Canvas.SetLeft(imgRana,
-                        nuevaPosicion);
-                    }
-                    
-                    break;
-                case Direccion.Ninguna:
-                    break;
-                default:
-                    break;
-            }
-        }
+ 
 
         void actualizar()
         {
@@ -108,74 +96,124 @@ namespace PracticaMovimiento
                 Dispatcher.Invoke(
                 () =>
                 {
-                    var tiempoActual = stopwatch.Elapsed;
-                    var deltaTime =
-                        tiempoActual - tiempoAnterior;
+                 
+            
+                    TimeSpan tiempoActual = stopwatch.Elapsed;
 
-                    //velocidadRana += 10 * deltaTime.TotalSeconds;
+
+                    double deltaTime = tiempoActual.TotalSeconds - tiempoAnterior.TotalSeconds;
+
 
                     if (estadoActual == EstadoJuego.Gameplay)
                     {
-                        moverJugador(deltaTime);
-                        double leftCarroActual =
-                        Canvas.GetLeft(imgCarro);
-                        Canvas.SetLeft(
-                            imgCarro, leftCarroActual - (20 * deltaTime.TotalSeconds));
-                        if (Canvas.GetLeft(imgCarro) <= -100)
+                       
+             
+                        player.Mover(deltaTime);
+                        // CHECAR COLISIONES EN TODOS LOS OBJETOS//
+                        foreach (Enemigo enemigo in enemigos)
                         {
-                            Canvas.SetLeft(imgCarro, 800);
+                            enemigo.Mover(deltaTime);
+
+                           
+                            if (player.PosicionX + player.Imagen.Width >= enemigo.PosicionX &&
+                        player.PosicionX <= enemigo.PosicionX + enemigo.Imagen.Width &&
+                        player.PosicionY + player.Imagen.Height >= enemigo.PosicionY &&
+                        player.PosicionY <= enemigo.PosicionY + enemigo.Imagen.Height)
+                            {
+                                lblColision.Text =
+                                    "HAY COLISION!!!";
+                         
+                            }
+                            else
+                            {
+                                lblColision.Text = "NOOO -HAY COLISION!!!";
+                            }
+                            foreach (Tile tile in tiles)
+                            {
+                                if (player.PosicionX + player.Imagen.Width >= tile.PosicionX &&
+                     player.PosicionX <= tile.PosicionX + tile.Imagen.Width &&
+                     player.PosicionY + player.Imagen.Height >= tile.PosicionY &&
+                     player.PosicionY <= tile.PosicionY + tile.Imagen.Height)
+                                {
+                                    lblInterseccionX.Text =
+                                      "HAY COLISION DE TILES ";
+                                    if(player.DireccionActual == Jugador.Direccion.Derecha)
+                                    {
+
+                                        player.PosicionX = player.PosicionX - 1;
+
+
+
+                                    }
+                                    if (player.DireccionActual == Jugador.Direccion.Izquierda)
+                                    {
+
+                                        player.PosicionX = player.PosicionX + 1;
+                                    }
+                                    if (player.DireccionActual == Jugador.Direccion.Arriba)
+                                    {
+
+                                        player.PosicionY = player.PosicionY + 1;
+
+                                    }
+                                    if (player.DireccionActual == Jugador.Direccion.Abajo)
+                                    {
+
+                                        player.PosicionY = player.PosicionY - 1;
+                                    }
+
+
+                                }
+                                if (enemigo.PosicionX + enemigo.Imagen.Width >= tile.PosicionX &&
+                     enemigo.PosicionX <= tile.PosicionX + tile.Imagen.Width &&
+                     enemigo.PosicionY + enemigo.Imagen.Height >= tile.PosicionY &&
+                     enemigo.PosicionY <= tile.PosicionY + tile.Imagen.Height)
+                                {
+                                    lblInterseccionY.Text =
+                                        "HAY COLISION DE TILES DEL ENEMIGO!!";
+                                    if (enemigo.DireccionActual == Enemigo.Direccion.Derecha)
+                                    {
+
+                                        enemigo.PosicionX = enemigo.PosicionX - 1;
+                                        enemigo.Random();
+
+
+                                    }
+                                    if (enemigo.DireccionActual == Enemigo.Direccion.Izquierda)
+                                    {
+
+                                        enemigo.PosicionX = enemigo.PosicionX + 1;
+                                        enemigo.Random();
+
+                                    }
+                                    if (enemigo.DireccionActual == Enemigo.Direccion.Arriba)
+                                    {
+
+                                        enemigo.PosicionY = enemigo.PosicionY + 1;
+                                        enemigo.Random();
+
+
+                                    }
+                                    if (enemigo.DireccionActual == Enemigo.Direccion.Abajo)
+                                    {
+
+                                        enemigo.PosicionY = enemigo.PosicionY - 1;
+                                        enemigo.Random();
+
+                                    }
+                                }
+                            }
+
                         }
 
 
-                        //Intersección en X
-                        double xCarro =
-                            Canvas.GetLeft(imgCarro);
-                        double xRana =
-                            Canvas.GetLeft(imgRana);
-                        if (xRana + imgRana.Width >= xCarro &&
-                            xRana <= xCarro + imgCarro.Width)
-                        {
-                            lblInterseccionX.Text =
-                            "SI HAY INTERSECCION EN X!!!";
-                        }
-                        else
-                        {
-                            lblInterseccionX.Text =
-                            "No hay interseccion en X";
-                        }
-                        double yCarro =
-                            Canvas.GetTop(imgCarro);
-                        double yRana =
-                            Canvas.GetTop(imgRana);
-                        if (yRana + imgRana.Height >= yCarro &&
-                            yRana <= yCarro + imgCarro.Height)
-                        {
-                            lblInterseccionY.Text =
-                                "SI HAY INTERSECCION EN Y!!!";
-                        }
-                        else
-                        {
-                            lblInterseccionY.Text =
-                                "No hay interseccion en Y";
-                        }
 
-                        if (xRana + imgRana.Width >= xCarro &&
-                            xRana <= xCarro + imgCarro.Width &&
-                            yRana + imgRana.Height >= yCarro &&
-                            yRana <= yCarro + imgCarro.Height)
-                        {
-                            lblColision.Text =
-                                "HAY COLISION!!!";
-                            estadoActual = EstadoJuego.Gameover;
-                            miCanvas.Visibility = Visibility.Collapsed;
-                            canvasGameOver.Visibility =
-                                Visibility.Visible;
-                        }
-                        else
-                        {
-                            lblColision.Text =
-                                "No hay colision";
-                        }
+
+
+
+
+
+
                     } else if (estadoActual == EstadoJuego.Gameover)
                     {
 
@@ -195,51 +233,33 @@ namespace PracticaMovimiento
             
         }
 
-        private void miCanvas_KeyDown(object sender, KeyEventArgs e)
+        private void canvasPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
             if (estadoActual == EstadoJuego.Gameplay)
             {
-                if (e.Key == Key.Up)
+                if (!e.IsRepeat)
                 {
-                    direccionJugador = Direccion.Arriba;
+              
+                    if (e.Key == Key.Up)
+                {
+                    player.CambiarDireccion(Jugador.Direccion.Arriba, Jugador.Orientacion.Arriba);
                 }
                 if (e.Key == Key.Down)
                 {
-                    direccionJugador = Direccion.Abajo;
+                    player.CambiarDireccion(Jugador.Direccion.Abajo, Jugador.Orientacion.Abajo);
                 }
                 if (e.Key == Key.Left)
                 {
-                    direccionJugador = Direccion.Izquierda;
+                    player.CambiarDireccion(Jugador.Direccion.Izquierda, Jugador.Orientacion.Izquierda);
                 }
                 if (e.Key == Key.Right)
                 {
-                    direccionJugador = Direccion.Derecha;
+                    player.CambiarDireccion(Jugador.Direccion.Derecha, Jugador.Orientacion.Derecha);
+                }
                 }
             }
         }
 
-        private void miCanvas_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Up && 
-                direccionJugador == Direccion.Arriba)
-            {
-                direccionJugador = Direccion.Ninguna;
-            }
-            if (e.Key == Key.Down &&
-                direccionJugador == Direccion.Abajo)
-            {
-                direccionJugador = Direccion.Ninguna;
-            }
-            if (e.Key == Key.Left &&
-                direccionJugador == Direccion.Izquierda)
-            {
-                direccionJugador = Direccion.Ninguna;
-            }
-            if (e.Key == Key.Right &&
-                direccionJugador == Direccion.Derecha)
-            {
-                direccionJugador = Direccion.Ninguna;
-            }
-        }
+        
     }
 }

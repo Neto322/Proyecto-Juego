@@ -5,15 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PracticaMovimiento"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="642.701" Width="986.58"
         >
     <Canvas>
-        <Canvas Visibility="Visible" Name="miCanvas" KeyDown="miCanvas_KeyDown" KeyUp="miCanvas_KeyUp" Focusable="True" Background="White">
-            <Image Name="imgRana" Source="rana.png" Width="90" Height="90" Stretch="Fill" Canvas.Left="327" Canvas.Top="297" RenderTransformOrigin="0.5,0.5"/>
-            <Image Name="imgCarro" Source="carro.png" Width="100" Height="60" Stretch="Fill" Canvas.Left="642" Canvas.Top="114" />
+
+        <Canvas Visibility="Visible" Name="canvasPrincipal" KeyDown="canvasPrincipal_KeyDown"  Focusable="True" Background="White">
+            <Image Source="Grid-pac-man-8970124-1680-1050.jpg" Height="614" Width="982"></Image>
+            <Image Name="rectjugador"  Source="JugadorMoviendoseDerecha1.png" Width="33" Height="33" Stretch="Fill" Canvas.Left="297" Canvas.Top="386" />
+            <Image Name="rectenemigo" Source="carro.png" Width="100" Height="60" Stretch="Fill" Canvas.Left="642" Canvas.Top="114" />
+
+
+            <Image Name="tile1" Source="bloque1.png" Width="123" Height="17" Canvas.Left="318" Canvas.Top="419" Stretch="Fill"></Image>
+            <Image Name="tile2" Source="bloque1.png" Width="127" Height="18" Canvas.Left="203" Canvas.Top="362" Stretch="Fill"></Image>
+            <Image Name="tile3" Source="Bloque1.png" Width="16" Height="56" Canvas.Left="258" Canvas.Top="380" Stretch="Fill"/>
+            <Image Name="tile4" Source="Bloque1.png" Width="16" Height="56" Canvas.Left="258" Canvas.Top="380" Stretch="Fill"/>
+
+
             <TextBlock x:Name="lblInterseccionX" Canvas.Left="10" TextWrapping="Wrap" Text="No hay intersección en X" Canvas.Top="10"/>
             <TextBlock x:Name="lblColision" Canvas.Left="10" TextWrapping="Wrap" Text="No hay colisión" Canvas.Top="52"/>
             <TextBlock x:Name="lblInterseccionY" Canvas.Left="10" TextWrapping="Wrap" Text="No hay intersección en Y" Canvas.Top="31"/>
+
         </Canvas>
         <Canvas Name="canvasGameOver" Visibility="Collapsed">
             <TextBlock Text="Game Overr" Canvas.Left="230" Canvas.Top="154" FontSize="72" Foreground="#FFBF3B3B" />
