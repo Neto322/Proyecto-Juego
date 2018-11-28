@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PracticaMovimiento"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="986.58" ResizeMode="NoResize"
+        Title="MainWindow" Height="650" Width="1053.677" ResizeMode="NoResize"
         >
     <Canvas Background="Black" Margin="0,0,-25,0">
 
@@ -612,8 +612,8 @@
             <Image Name="tile82" Source="Textura2.png" Width="72" Height="309" Canvas.Top="-34" Stretch="Fill" Canvas.Left="-62"/>
             <Image Name="tile84" Source="Textura2.png" Width="967" Height="60" Canvas.Top="-34" Stretch="Fill" Canvas.Left="15"/>
             <Image Name="tile86" Source="Textura2.png" Width="108" Height="71" Canvas.Top="307" Stretch="Fill" Canvas.Left="10"/>
-            <Image Name="tile87" Source="Textura2.png" Width="108" Height="168" Canvas.Top="26" Stretch="Fill" Canvas.Left="982"/>
-            <Image Name="tile88" Source="Textura2.png" Width="100" Height="234" Canvas.Top="378" Stretch="Fill" Canvas.Left="1005"/>
+            <Image Name="tile87" Source="Textura2.png" Width="108" Height="228" Canvas.Top="-34" Stretch="Fill" Canvas.Left="982"/>
+            <Image Name="tile88" Source="Textura2.png" Width="100" Height="418" Canvas.Top="194" Stretch="Fill" Canvas.Left="1005"/>
             <Image Name="tile89" Source="Textura2.png" Width="995" Height="41" Canvas.Top="587" Stretch="Fill" Canvas.Left="10"/>
 
             <Image Name="DerechaWarp" Source="Textura1.png" Canvas.Left="938" Canvas.Top="265" Height="42" Width="44"></Image>
@@ -720,7 +720,7 @@
         <Canvas Name="canvasGameOver" Visibility="Collapsed" Background="White">
             <Image Source="GAMEOVER.png" Canvas.Left="210" Canvas.Top="96"></Image>
             <TextBlock x:Name="PuntuacionTotal2" Canvas.Left="210" TextWrapping="Wrap" Text="" Canvas.Top="456" FontFamily="Hobo Std" FontSize="48" Foreground="White" Height="120" Width="765"/>
-           
+
         </Canvas>
     </Canvas>
 </Window>
