@@ -65,11 +65,11 @@ namespace PracticaMovimiento
 
 
             Imagen = imagen;
-            arriba.Add(new BitmapImage(new Uri("JugadorMoviendoseIzquierda1.png", UriKind.Relative)));
-            arriba.Add(new BitmapImage(new Uri("JugadorMoviendoseIzquierda2.png", UriKind.Relative)));
+            arriba.Add(new BitmapImage(new Uri("JugadorMoviendoseArriba1.png", UriKind.Relative)));
+            arriba.Add(new BitmapImage(new Uri("JugadorMoviendoseArriba2.png", UriKind.Relative)));
 
-            abajo.Add(new BitmapImage(new Uri("JugadorMoviendoseIzquierda1.png", UriKind.Relative)));
-            abajo.Add(new BitmapImage(new Uri("JugadorMoviendoseIzquierda2.png", UriKind.Relative)));
+            abajo.Add(new BitmapImage(new Uri("JugadorMoviendoseAbajo1.png", UriKind.Relative)));
+            abajo.Add(new BitmapImage(new Uri("JugadorMoviendoseAbajo2.png", UriKind.Relative)));
 
             izquierda.Add(new BitmapImage(new Uri("JugadorMoviendoseIzquierda1.png", UriKind.Relative)));
             izquierda.Add(new BitmapImage(new Uri("JugadorMoviendoseIzquierda2.png", UriKind.Relative)));

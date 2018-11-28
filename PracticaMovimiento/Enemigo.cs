@@ -40,9 +40,9 @@ namespace PracticaMovimiento
             public double Velocidad { get; set; }
 
 
-            int numerorandom;
+            int numerorandom { get; set; }
 
-            int spriteActual = 0;
+        int spriteActual = 0;
 
             public double tiempoTranscurridoEnSprite = 0;
 
@@ -52,35 +52,24 @@ namespace PracticaMovimiento
 
             Random rnd;
 
-      
-
-
-
-
-
-
-
-
-
         public Enemigo(Image imagen)
             {
 
 
                 Imagen = imagen;
-                arriba.Add(new BitmapImage(new Uri("policia.png", UriKind.Relative)));
-                arriba.Add(new BitmapImage(new Uri("policia.png", UriKind.Relative)));
+                arriba.Add(new BitmapImage(new Uri("GuardiaArriba1.png", UriKind.Relative)));
+                arriba.Add(new BitmapImage(new Uri("GuardiaArriba2.png", UriKind.Relative)));
 
-                abajo.Add(new BitmapImage(new Uri("policia.png", UriKind.Relative)));
-                abajo.Add(new BitmapImage(new Uri("policia.png", UriKind.Relative)));
+                abajo.Add(new BitmapImage(new Uri("GuardiaAbajo1.png", UriKind.Relative)));
+                abajo.Add(new BitmapImage(new Uri("GuardiaAbajo2.png", UriKind.Relative)));
 
-                izquierda.Add(new BitmapImage(new Uri("policia.png", UriKind.Relative)));
-                izquierda.Add(new BitmapImage(new Uri("policia.png", UriKind.Relative)));
+                izquierda.Add(new BitmapImage(new Uri("GuardiaIzquierda1.png", UriKind.Relative)));
+                izquierda.Add(new BitmapImage(new Uri("GuardiaIzquierda2.png", UriKind.Relative)));
 
-                derecha.Add(new BitmapImage(new Uri("policia.png", UriKind.Relative)));
-                derecha.Add(new BitmapImage(new Uri("policia.png", UriKind.Relative)));
+                derecha.Add(new BitmapImage(new Uri("GuardiaDerecha1.png", UriKind.Relative)));
+                derecha.Add(new BitmapImage(new Uri("GuardiaDerecha2.png", UriKind.Relative)));
                 Imagen.Source = derecha[0];
-                DireccionActual = Direccion.Abajo;
-                OrientacionActual = Orientacion.Derecha;
+
 
 
 
@@ -101,7 +90,7 @@ namespace PracticaMovimiento
         }
         public void Random()
         {
-            numerorandom = rnd.Next(1, 4);
+            numerorandom = rnd.Next(0 , 5);
             if (numerorandom == 1)
             {
 

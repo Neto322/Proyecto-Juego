@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PracticaMovimiento"
         mc:Ignorable="d"
-        Title="MainWindow" Height="642.701" Width="986.58"
+        Title="MainWindow" Height="650" Width="986.58"
         >
-    <Canvas>
+    <Canvas Background="Black" Margin="0,0,-25,0">
 
-        <Canvas Visibility="Visible" Name="canvasPrincipal" KeyDown="canvasPrincipal_KeyDown" KeyUp="canvasPrincipal_KeyUp" Focusable="True" Background="White">
-            <UniformGrid>
+        <Canvas Visibility="Visible" Name="canvasPrincipal" KeyDown="canvasPrincipal_KeyDown" KeyUp="canvasPrincipal_KeyUp" Focusable="True" Background="Black">
+            <UniformGrid Canvas.Left="10" Width="995">
                 <Image Source="Textura1.png" Height="42" Width="42" Canvas.Left="10" Canvas.Top="53"></Image>
                 <Image Source="Textura1.png" Height="42" Width="42" Canvas.Left="10" Canvas.Top="53"></Image>
                 <Image Source="Textura1.png" Height="42" Width="42" Canvas.Left="10" Canvas.Top="53"></Image>
@@ -524,8 +524,8 @@
 
 
 
-            <Image Name="rectjugador"  Source="JugadorMoviendoseDerecha1.png" Width="20" Height="20" Stretch="Fill" Canvas.Left="299" Canvas.Top="389" />
-            <Image Name="rectenemigo" Source="policia.png" Width="27" Height="27" Stretch="Fill" Canvas.Left="625" Canvas.Top="104" />
+            <Image Name="rectjugador"  Source="JugadorMoviendoseDerecha1.png" Width="20" Height="20" Stretch="Fill" Canvas.Left="480" Canvas.Top="276" />
+            <Image Name="rectenemigo" Source="policia.png" Width="23" Height="23" Stretch="Fill" Canvas.Left="561" Canvas.Top="218" />
 
 
 
@@ -541,9 +541,9 @@
             <Image Name="tile10" Source="Textura2.png" Width="124" Height="17" Canvas.Left="542" Canvas.Top="531" Stretch="Fill"/>
             <Image Name="tile11" Source="Textura2.png" Width="165" Height="17" Canvas.Left="764" Canvas.Top="531" Stretch="Fill"/>
             <Image Name="tile12" Source="Textura2.png" Width="127" Height="17" Canvas.Left="203" Canvas.Top="475" Stretch="Fill"/>
-            <Image Name="tile13" Source="Textura2.png" Width="127" Height="17" Canvas.Left="427" Canvas.Top="475" Stretch="Fill"/>
+            <Image Name="tile13" Source="Textura2.png" Width="127" Height="16" Canvas.Left="427" Canvas.Top="476" Stretch="Fill"/>
             <Image Name="tile14" Source="Textura2.png" Width="127" Height="17" Canvas.Left="652" Canvas.Top="475" Stretch="Fill"/>
-            <Image Name="tile15" Source="Textura2.png" Width="127" Height="17" Canvas.Left="652" Canvas.Top="475" Stretch="Fill"/>
+            <Image Name="tile15" Source="Textura2.png" Width="127" Height="16" Canvas.Left="652" Canvas.Top="476" Stretch="Fill"/>
             <Image Name="tile16" Source="Textura2.png" Width="127" Height="17" Canvas.Left="539" Canvas.Top="419" Stretch="Fill"/>
             <Image Name="tile17" Source="Textura2.png" Width="127" Height="17" Canvas.Left="652" Canvas.Top="363" Stretch="Fill"/>
             <Image Name="tile18" Source="Textura2.png" Width="127" Height="17" Canvas.Left="652" Canvas.Top="363" Stretch="Fill"/>
@@ -552,24 +552,24 @@
             <Image Name="tile21" Source="Textura2.png" Width="127" Height="16" Canvas.Left="427" Canvas.Top="140" Stretch="Fill"/>
             <Image Name="tile22" Source="Textura2.png" Width="127" Height="16" Canvas.Left="542" Canvas.Top="194" Stretch="Fill"/>
             <Image Name="tile23" Source="Textura2.png" Width="127" Height="16" Canvas.Left="318" Canvas.Top="194" Stretch="Fill"/>
-            <Image Name="tile24" Source="Textura2.png" Width="18" Height="127" Canvas.Left="145" Canvas.Top="140" Stretch="Fill"/>
-            <Image Name="tile25" Source="Textura2.png" Width="18" Height="127" Canvas.Left="818" Canvas.Top="140" Stretch="Fill"/>
+            <Image Name="tile24" Source="Textura2.png" Width="18" Height="125" Canvas.Left="145" Canvas.Top="140" Stretch="Fill"/>
+            <Image Name="tile25" Source="Textura2.png" Width="18" Height="125" Canvas.Left="818" Canvas.Top="140" Stretch="Fill"/>
             <Image Name="tile26" Source="Textura2.png" Width="18" Height="127" Canvas.Left="258" Canvas.Top="-34" Stretch="Fill"/>
             <Image Name="tile27" Source="Textura2.png" Width="18" Height="127" Canvas.Left="482" Canvas.Top="-34" Stretch="Fill"/>
             <Image Name="tile28" Source="Textura2.png" Width="18" Height="127" Canvas.Left="708" Canvas.Top="-34" Stretch="Fill"/>
-            <Image Name="tile29" Source="Textura2.png" Width="18" Height="127" Canvas.Left="594" Canvas.Top="140" Stretch="Fill"/>
-            <Image Name="tile30" Source="Textura2.png" Width="18" Height="127" Canvas.Left="370" Canvas.Top="140" Stretch="Fill"/>
+            <Image Name="tile29" Source="Textura2.png" Width="18" Height="125" Canvas.Left="594" Canvas.Top="140" Stretch="Fill"/>
+            <Image Name="tile30" Source="Textura2.png" Width="18" Height="125" Canvas.Left="370" Canvas.Top="140" Stretch="Fill"/>
             <Image Name="tile31" Source="Textura2.png" Width="71" Height="14" Canvas.Left="708" Canvas.Top="307" Stretch="Fill"/>
             <Image Name="tile32" Source="Textura2.png" Width="74" Height="14" Canvas.Left="652" Canvas.Top="251" Stretch="Fill"/>
             <Image Name="tile33" Source="Textura2.png" Width="18" Height="70" Canvas.Left="708" Canvas.Top="251" Stretch="Fill"/>
             <Image Name="tile34" Source="Textura2.png" Width="18" Height="70" Canvas.Left="482" Canvas.Top="140" Stretch="Fill"/>
-            <Image Name="tile35" Source="Textura2.png" Width="18" Height="73" Canvas.Left="761" Canvas.Top="194" Stretch="Fill"/>
+            <Image Name="tile35" Source="Textura2.png" Width="18" Height="71" Canvas.Left="761" Canvas.Top="194" Stretch="Fill"/>
             <Image Name="tile36" Source="Textura2.png" Width="18" Height="70" Canvas.Left="708" Canvas.Top="140" Stretch="Fill"/>
             <Image Name="tile37" Source="Textura2.png" Width="18" Height="73" Canvas.Left="818" Canvas.Top="307" Stretch="Fill"/>
             <Image Name="tile38" Source="Textura2.png" Width="18" Height="73" Canvas.Left="818" Canvas.Top="475" Stretch="Fill"/>
             <Image Name="tile39" Source="Textura2.png" Width="18" Height="73" Canvas.Left="876" Canvas.Top="419" Stretch="Fill"/>
-            <Image Name="tile40" Source="Textura2.png" Width="18" Height="73" Canvas.Left="708" Canvas.Top="475" Stretch="Fill"/>
-            <Image Name="tile41" Source="Textura2.png" Width="18" Height="73" Canvas.Left="594" Canvas.Top="475" Stretch="Fill"/>
+            <Image Name="tile40" Source="Textura2.png" Width="18" Height="72" Canvas.Left="708" Canvas.Top="476" Stretch="Fill"/>
+            <Image Name="tile41" Source="Textura2.png" Width="18" Height="72" Canvas.Left="594" Canvas.Top="476" Stretch="Fill"/>
             <Image Name="tile42" Source="Textura2.png" Width="18" Height="73" Canvas.Left="482" Canvas.Top="475" Stretch="Fill"/>
             <Image Name="tile43" Source="Textura2.png" Width="18" Height="73" Canvas.Left="482" Canvas.Top="363" Stretch="Fill"/>
             <Image Name="tile44" Source="Textura2.png" Width="18" Height="73" Canvas.Left="482" Canvas.Top="363" Stretch="Fill"/>
@@ -586,21 +586,21 @@
             <Image Name="tile55" Source="Textura2.png" Width="18" Height="73" Canvas.Left="258" Canvas.Top="250" Stretch="Fill"/>
             <Image Name="tile56" Source="Textura2.png" Width="18" Height="73" Canvas.Left="256" Canvas.Top="140" Stretch="Fill"/>
             <Image Name="tile57" Source="Textura2.png" Width="18" Height="73" Canvas.Left="199" Canvas.Top="192" Stretch="Fill"/>
-            <Image Name="tile58" Source="Textura2.png" Width="72" Height="37" Canvas.Left="145" Canvas.Top="62" Stretch="Fill"/>
-            <Image Name="tile59" Source="Textura2.png" Width="72" Height="37" Canvas.Left="764" Canvas.Top="62" Stretch="Fill"/>
-            <Image Name="tile60" Source="Textura2.png" Width="124" Height="37" Canvas.Left="542" Canvas.Top="62" Stretch="Fill"/>
-            <Image Name="tile61" Source="Textura2.png" Width="124" Height="37" Canvas.Left="317" Canvas.Top="62" Stretch="Fill"/>
+            <Image Name="tile58" Source="Textura2.png" Width="72" Height="31" Canvas.Left="145" Canvas.Top="62" Stretch="Fill"/>
+            <Image Name="tile59" Source="Textura2.png" Width="72" Height="31" Canvas.Left="764" Canvas.Top="62" Stretch="Fill"/>
+            <Image Name="tile60" Source="Textura2.png" Width="124" Height="31" Canvas.Left="542" Canvas.Top="62" Stretch="Fill"/>
+            <Image Name="tile61" Source="Textura2.png" Width="124" Height="31" Canvas.Left="317" Canvas.Top="62" Stretch="Fill"/>
             <Image Name="tile62" Source="Textura2.png" Width="108" Height="71" Canvas.Top="196" Stretch="Fill"  Canvas.Left="10"/>
-            <Image Name="tile63" Source="Textura2.png" Width="108" Height="71" Canvas.Top="194" Stretch="Fill" Canvas.Left="876"/>
-            <Image Name="tile64" Source="Textura2.png" Width="108" Height="71" Canvas.Top="309" Stretch="Fill" Canvas.Left="874"/>
-            <Image Name="tile66" Source="Textura2.png" Width="56" Height="37" Canvas.Top="62" Stretch="Fill" Canvas.Left="52"/>
-            <Image Name="tile67" Source="Textura2.png" Width="56" Height="37" Canvas.Top="62" Stretch="Fill" Canvas.Left="873"/>
+            <Image Name="tile63" Source="Textura2.png" Width="129" Height="71" Canvas.Top="194" Stretch="Fill" Canvas.Left="876"/>
+            <Image Name="tile64" Source="Textura2.png" Width="131" Height="73" Canvas.Top="307" Stretch="Fill" Canvas.Left="874"/>
+            <Image Name="tile66" Source="Textura2.png" Width="56" Height="31" Canvas.Top="62" Stretch="Fill" Canvas.Left="52"/>
+            <Image Name="tile67" Source="Textura2.png" Width="56" Height="31" Canvas.Top="62" Stretch="Fill" Canvas.Left="873"/>
             <Image Name="tile68" Source="Textura2.png" Width="53" Height="16" Canvas.Top="140" Stretch="Fill" Canvas.Left="876"/>
             <Image Name="tile69" Source="Textura2.png" Width="124" Height="16" Canvas.Top="140" Stretch="Fill" Canvas.Left="655"/>
             <Image Name="tile70" Source="Textura2.png" Width="56" Height="16" Canvas.Top="140" Stretch="Fill" Canvas.Left="52"/>
             <Image Name="tile71" Source="Textura2.png" Width="56" Height="16" Canvas.Top="419" Stretch="Fill" Canvas.Left="52"/>
             <Image Name="tile72" Source="Textura2.png" Width="56" Height="16" Canvas.Top="307" Stretch="Fill" Canvas.Left="207"/>
-            <Image Name="tile73" Source="Textura2.png" Width="56" Height="16" Canvas.Top="250" Stretch="Fill" Canvas.Left="274"/>
+            <Image Name="tile73" Source="Textura2.png" Width="56" Height="15" Canvas.Top="250" Stretch="Fill" Canvas.Left="274"/>
             <Image Name="tile74" Source="Textura2.png" Width="56" Height="16" Canvas.Top="307" Stretch="Fill" Canvas.Left="318"/>
             <Image Name="tile75" Source="Textura2.png" Width="56" Height="16" Canvas.Top="307" Stretch="Fill" Canvas.Left="610"/>
             <Image Name="tile76" Source="Textura2.png" Width="72" Height="16" Canvas.Top="419" Stretch="Fill" Canvas.Left="764"/>
@@ -609,108 +609,102 @@
             <Image Name="tile79" Source="Textura2.png" Width="72" Height="16" Canvas.Top="476" Stretch="Fill" Canvas.Left="-24"/>
             <Image Name="tile80" Source="Textura2.png" Width="72" Height="16" Canvas.Top="476" Stretch="Fill" Canvas.Left="-24"/>
             <Image Name="tile81" Source="Textura2.png" Width="72" Height="305" Canvas.Top="307" Stretch="Fill" Canvas.Left="-62"/>
-            <Image Name="tile82" Source="Textura2.png" Width="72" Height="305" Canvas.Top="-30" Stretch="Fill" Canvas.Left="-62"/>
-            <Image Name="tile83" Source="Textura2.png" Width="995" Height="60" Canvas.Top="-34" Stretch="Fill" Canvas.Left="10"/>
-            <Image Name="tile84" Source="Textura2.png" Width="995" Height="60" Canvas.Top="-34" Stretch="Fill" Canvas.Left="10"/>
-            <Image Name="tile86" Source="Textura2.png" Width="108" Height="71" Canvas.Top="307" Stretch="Fill"/>
-            <Image Name="tile87" Source="Textura2.png" Width="108" Height="168" Canvas.Top="26" Stretch="Fill" Canvas.Left="969"/>
-            <Image Name="tile88" Source="Textura2.png" Width="108" Height="234" Canvas.Top="380" Stretch="Fill" Canvas.Left="969"/>
-            <Image Name="tile89" Source="Textura2.png" Width="959" Height="27" Canvas.Top="587" Stretch="Fill" Canvas.Left="10"/>
+            <Image Name="tile82" Source="Textura2.png" Width="72" Height="309" Canvas.Top="-34" Stretch="Fill" Canvas.Left="-62"/>
+            <Image Name="tile84" Source="Textura2.png" Width="972" Height="60" Canvas.Top="-34" Stretch="Fill" Canvas.Left="10"/>
+            <Image Name="tile86" Source="Textura2.png" Width="108" Height="71" Canvas.Top="307" Stretch="Fill" Canvas.Left="10"/>
+            <Image Name="tile87" Source="Textura2.png" Width="108" Height="168" Canvas.Top="26" Stretch="Fill" Canvas.Left="966"/>
+            <Image Name="tile88" Source="Textura2.png" Width="100" Height="234" Canvas.Top="378" Stretch="Fill" Canvas.Left="1005"/>
+            <Image Name="tile89" Source="Textura2.png" Width="995" Height="41" Canvas.Top="587" Stretch="Fill" Canvas.Left="10"/>
 
-            <Image Name="DerechaWarp" Source="Textura1.png" Canvas.Left="938" Canvas.Top="265" Height="44" Width="44"></Image>
-            <Image Name="IzquierdaWarp" Source="Textura1.png" Canvas.Top="267" Height="40" Width="40"/>
-
+            <Image Name="DerechaWarp" Source="Textura1.png" Canvas.Left="938" Canvas.Top="265" Height="42" Width="44"></Image>
+            <Image Name="IzquierdaWarp" Source="Textura1.png" Canvas.Top="267" Height="40" Width="40" Canvas.Left="10"/>
 
 
 
 
 
+            <Image x:Name="dinero_Copy" Source="Dinero.png" Canvas.Left="231" Canvas.Top="113"  Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy1" Source="Dinero.png" Canvas.Left="231" Canvas.Top="35"  Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy2" Source="Dinero.png" Canvas.Left="119" Canvas.Top="113"  Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy3" Source="Dinero.png" Canvas.Left="119" Canvas.Top="35"  Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy4" Source="Dinero.png" Canvas.Left="22" Canvas.Top="35" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy5" Source="Dinero.png" Canvas.Left="22" Canvas.Top="113" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy6" Source="Dinero.png" Canvas.Left="22" Canvas.Top="169" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy7" Source="Dinero.png" Canvas.Left="118" Canvas.Top="169" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy8" Source="Dinero.png" Canvas.Left="281" Canvas.Top="35" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy9" Source="Dinero.png" Canvas.Left="281" Canvas.Top="113" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy10" Source="Dinero.png" Canvas.Left="452" Canvas.Top="113" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy11" Source="Dinero.png" Canvas.Left="452" Canvas.Top="35" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy12" Source="Dinero.png" Canvas.Left="505" Canvas.Top="35" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy13" Source="Dinero.png" Canvas.Left="672" Canvas.Top="35" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy14" Source="Dinero.png" Canvas.Left="672" Canvas.Top="113" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy15" Source="Dinero.png" Canvas.Left="505" Canvas.Top="113" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy16" Source="Dinero.png" Canvas.Left="736" Canvas.Top="113" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy17" Source="Dinero.png" Canvas.Left="736" Canvas.Top="35" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy18" Source="Dinero.png" Canvas.Left="845" Canvas.Top="35" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy19" Source="Dinero.png" Canvas.Left="845" Canvas.Top="113" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy20" Source="Dinero.png" Canvas.Left="934" Canvas.Top="113" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy21" Source="Dinero.png" Canvas.Left="933" Canvas.Top="35" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy22" Source="Dinero.png" Canvas.Left="934" Canvas.Top="172" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy23" Source="Dinero.png" Canvas.Left="849" Canvas.Top="172" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy24" Source="Dinero.png" Canvas.Left="841" Canvas.Top="276" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy25" Source="Dinero.png" Canvas.Left="841" Canvas.Top="389" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy26" Source="Dinero.png" Canvas.Left="845" Canvas.Top="453" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy27" Source="Dinero.png" Canvas.Left="736" Canvas.Top="448" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy28" Source="Dinero.png" Canvas.Left="736" Canvas.Top="389" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy29" Source="Dinero.png" Canvas.Left="934" Canvas.Top="389" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy30" Source="Dinero.png" Canvas.Left="901" Canvas.Top="498" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy31" Source="Dinero.png" Canvas.Left="934" Canvas.Top="555" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy32" Source="Dinero.png" Canvas.Left="736" Canvas.Top="555" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy33" Source="Dinero.png" Canvas.Left="505" Canvas.Top="555" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy34" Source="Dinero.png" Canvas.Left="558" Canvas.Top="498" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy35" Source="Dinero.png" Canvas.Left="672" Canvas.Top="498" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy36" Source="Dinero.png" Canvas.Left="452" Canvas.Top="498" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy37" Source="Dinero.png" Canvas.Left="281" Canvas.Top="498" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy38" Source="Dinero.png" Canvas.Left="231" Canvas.Top="555" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy39" Source="Dinero.png" Canvas.Left="171" Canvas.Top="504" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy40" Source="Dinero.png" Canvas.Left="26" Canvas.Top="498" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy41" Source="Dinero.png" Canvas.Left="22" Canvas.Top="551" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy42" Source="Dinero.png" Canvas.Left="22" Canvas.Top="389" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy43" Source="Dinero.png" Canvas.Left="231" Canvas.Top="389" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy44" Source="Dinero.png" Canvas.Left="119" Canvas.Top="448" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy45" Source="Dinero.png" Canvas.Left="452" Canvas.Top="448" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy46" Source="Dinero.png" Canvas.Left="281" Canvas.Top="448" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy47" Source="Dinero.png" Canvas.Left="452" Canvas.Top="389" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy48" Source="Dinero.png" Canvas.Left="343" Canvas.Top="330" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy49" Source="Dinero.png" Canvas.Left="171" Canvas.Top="330" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy50" Source="Dinero.png" Canvas.Left="118" Canvas.Top="276" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy51" Source="Dinero.png" Canvas.Left="229" Canvas.Top="169" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy52" Source="Dinero.png" Canvas.Left="229" Canvas.Top="276" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy53" Source="Dinero.png" Canvas.Left="343" Canvas.Top="215" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy54" Source="Dinero.png" Canvas.Left="343" Canvas.Top="167" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy55" Source="Dinero.png" Canvas.Left="452" Canvas.Top="167" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy56" Source="Dinero.png" Canvas.Left="505" Canvas.Top="169" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy57" Source="Dinero.png" Canvas.Left="281" Canvas.Top="389" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy58" Source="Dinero.png" Canvas.Left="672" Canvas.Top="276" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy59" Source="Dinero.png" Canvas.Left="617" Canvas.Top="167" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy60" Source="Dinero.png" Canvas.Left="736" Canvas.Top="167" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy61" Source="Dinero.png" Canvas.Left="617" Canvas.Top="330" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy62" Source="Dinero.png" Canvas.Left="681" Canvas.Top="389" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy63" Source="Dinero.png" Canvas.Left="505" Canvas.Top="389" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy64" Source="Dinero.png" Canvas.Left="505" Canvas.Top="448" Height="26" Width="26"/>
+            <Image x:Name="dinero_Copy65" Source="Dinero.png" Canvas.Left="681" Canvas.Top="448" Height="26" Width="26"/>
 
 
 
-
-
-
-
-
-
-
-
-            <TextBlock x:Name="lblInterseccionX" Canvas.Left="10" TextWrapping="Wrap" Text="No hay intersección en X" Canvas.Top="10"/>
-            <TextBlock x:Name="lblColision" Canvas.Left="10" TextWrapping="Wrap" Text="No hay colisión" Canvas.Top="52"/>
-            <TextBlock x:Name="lblInterseccionY" Canvas.Left="10" TextWrapping="Wrap" Text="No hay intersección en Y" Canvas.Top="31"/>
-
-
-
-            <Image x:Name="dinero_Copy" Source="Dinero.png" Canvas.Left="231" Canvas.Top="113"/>
-            <Image x:Name="dinero_Copy1" Source="Dinero.png" Canvas.Left="231" Canvas.Top="35"/>
-            <Image x:Name="dinero_Copy2" Source="Dinero.png" Canvas.Left="119" Canvas.Top="113"/>
-            <Image x:Name="dinero_Copy3" Source="Dinero.png" Canvas.Left="119" Canvas.Top="35"/>
-            <Image x:Name="dinero_Copy4" Source="Dinero.png" Canvas.Left="22" Canvas.Top="35"/>
-            <Image x:Name="dinero_Copy5" Source="Dinero.png" Canvas.Left="22" Canvas.Top="113"/>
-            <Image x:Name="dinero_Copy6" Source="Dinero.png" Canvas.Left="22" Canvas.Top="169"/>
-            <Image x:Name="dinero_Copy7" Source="Dinero.png" Canvas.Left="118" Canvas.Top="169"/>
-            <Image x:Name="dinero_Copy8" Source="Dinero.png" Canvas.Left="281" Canvas.Top="35"/>
-            <Image x:Name="dinero_Copy9" Source="Dinero.png" Canvas.Left="281" Canvas.Top="113"/>
-            <Image x:Name="dinero_Copy10" Source="Dinero.png" Canvas.Left="452" Canvas.Top="113"/>
-            <Image x:Name="dinero_Copy11" Source="Dinero.png" Canvas.Left="452" Canvas.Top="35"/>
-            <Image x:Name="dinero_Copy12" Source="Dinero.png" Canvas.Left="505" Canvas.Top="35"/>
-            <Image x:Name="dinero_Copy13" Source="Dinero.png" Canvas.Left="672" Canvas.Top="35"/>
-            <Image x:Name="dinero_Copy14" Source="Dinero.png" Canvas.Left="672" Canvas.Top="113"/>
-            <Image x:Name="dinero_Copy15" Source="Dinero.png" Canvas.Left="505" Canvas.Top="113"/>
-            <Image x:Name="dinero_Copy16" Source="Dinero.png" Canvas.Left="736" Canvas.Top="113"/>
-            <Image x:Name="dinero_Copy17" Source="Dinero.png" Canvas.Left="736" Canvas.Top="35"/>
-            <Image x:Name="dinero_Copy18" Source="Dinero.png" Canvas.Left="845" Canvas.Top="35"/>
-            <Image x:Name="dinero_Copy19" Source="Dinero.png" Canvas.Left="845" Canvas.Top="113"/>
-            <Image x:Name="dinero_Copy20" Source="Dinero.png" Canvas.Left="934" Canvas.Top="113"/>
-            <Image x:Name="dinero_Copy21" Source="Dinero.png" Canvas.Left="933" Canvas.Top="35"/>
-            <Image x:Name="dinero_Copy22" Source="Dinero.png" Canvas.Left="934" Canvas.Top="172"/>
-            <Image x:Name="dinero_Copy23" Source="Dinero.png" Canvas.Left="849" Canvas.Top="172"/>
-            <Image x:Name="dinero_Copy24" Source="Dinero.png" Canvas.Left="841" Canvas.Top="276"/>
-            <Image x:Name="dinero_Copy25" Source="Dinero.png" Canvas.Left="841" Canvas.Top="389"/>
-            <Image x:Name="dinero_Copy26" Source="Dinero.png" Canvas.Left="845" Canvas.Top="453"/>
-            <Image x:Name="dinero_Copy27" Source="Dinero.png" Canvas.Left="736" Canvas.Top="448"/>
-            <Image x:Name="dinero_Copy28" Source="Dinero.png" Canvas.Left="736" Canvas.Top="389"/>
-            <Image x:Name="dinero_Copy29" Source="Dinero.png" Canvas.Left="934" Canvas.Top="389"/>
-            <Image x:Name="dinero_Copy30" Source="Dinero.png" Canvas.Left="901" Canvas.Top="498"/>
-            <Image x:Name="dinero_Copy31" Source="Dinero.png" Canvas.Left="934" Canvas.Top="555"/>
-            <Image x:Name="dinero_Copy32" Source="Dinero.png" Canvas.Left="736" Canvas.Top="555"/>
-            <Image x:Name="dinero_Copy33" Source="Dinero.png" Canvas.Left="505" Canvas.Top="555"/>
-            <Image x:Name="dinero_Copy34" Source="Dinero.png" Canvas.Left="558" Canvas.Top="498"/>
-            <Image x:Name="dinero_Copy35" Source="Dinero.png" Canvas.Left="672" Canvas.Top="498"/>
-            <Image x:Name="dinero_Copy36" Source="Dinero.png" Canvas.Left="452" Canvas.Top="498"/>
-            <Image x:Name="dinero_Copy37" Source="Dinero.png" Canvas.Left="281" Canvas.Top="498"/>
-            <Image x:Name="dinero_Copy38" Source="Dinero.png" Canvas.Left="231" Canvas.Top="555"/>
-            <Image x:Name="dinero_Copy39" Source="Dinero.png" Canvas.Left="171" Canvas.Top="504"/>
-            <Image x:Name="dinero_Copy40" Source="Dinero.png" Canvas.Left="26" Canvas.Top="498"/>
-            <Image x:Name="dinero_Copy41" Source="Dinero.png" Canvas.Left="22" Canvas.Top="555"/>
-            <Image x:Name="dinero_Copy42" Source="Dinero.png" Canvas.Left="22" Canvas.Top="389"/>
-            <Image x:Name="dinero_Copy43" Source="Dinero.png" Canvas.Left="231" Canvas.Top="389"/>
-            <Image x:Name="dinero_Copy44" Source="Dinero.png" Canvas.Left="119" Canvas.Top="448"/>
-            <Image x:Name="dinero_Copy45" Source="Dinero.png" Canvas.Left="452" Canvas.Top="448"/>
-            <Image x:Name="dinero_Copy46" Source="Dinero.png" Canvas.Left="281" Canvas.Top="448"/>
-            <Image x:Name="dinero_Copy47" Source="Dinero.png" Canvas.Left="452" Canvas.Top="389"/>
-            <Image x:Name="dinero_Copy48" Source="Dinero.png" Canvas.Left="343" Canvas.Top="330"/>
-            <Image x:Name="dinero_Copy49" Source="Dinero.png" Canvas.Left="171" Canvas.Top="330"/>
-            <Image x:Name="dinero_Copy50" Source="Dinero.png" Canvas.Left="118" Canvas.Top="276"/>
-            <Image x:Name="dinero_Copy51" Source="Dinero.png" Canvas.Left="229" Canvas.Top="169"/>
-            <Image x:Name="dinero_Copy52" Source="Dinero.png" Canvas.Left="229" Canvas.Top="276"/>
-            <Image x:Name="dinero_Copy53" Source="Dinero.png" Canvas.Left="343" Canvas.Top="215"/>
-            <Image x:Name="dinero_Copy54" Source="Dinero.png" Canvas.Left="343" Canvas.Top="167"/>
-            <Image x:Name="dinero_Copy55" Source="Dinero.png" Canvas.Left="452" Canvas.Top="167"/>
-            <Image x:Name="dinero_Copy56" Source="Dinero.png" Canvas.Left="505" Canvas.Top="169"/>
-            <Image x:Name="dinero_Copy57" Source="Dinero.png" Canvas.Left="281" Canvas.Top="389"/>
-            <Image x:Name="dinero_Copy58" Source="Dinero.png" Canvas.Left="672" Canvas.Top="276"/>
-            <Image x:Name="dinero_Copy59" Source="Dinero.png" Canvas.Left="617" Canvas.Top="167"/>
-            <Image x:Name="dinero_Copy60" Source="Dinero.png" Canvas.Left="736" Canvas.Top="167"/>
-            <Image x:Name="dinero_Copy61" Source="Dinero.png" Canvas.Left="617" Canvas.Top="330"/>
-            <Image x:Name="dinero_Copy62" Source="Dinero.png" Canvas.Left="681" Canvas.Top="389"/>
-            <Image x:Name="dinero_Copy63" Source="Dinero.png" Canvas.Left="505" Canvas.Top="389"/>
-            <Image x:Name="dinero_Copy64" Source="Dinero.png" Canvas.Left="505" Canvas.Top="448"/>
-            <Image x:Name="dinero_Copy65" Source="Dinero.png" Canvas.Left="681" Canvas.Top="448"/>
+            <TextBlock x:Name="PuntuacionTotal" Canvas.Left="52" TextWrapping="Wrap" Text="Puntos" Canvas.Top="590" FontFamily="Hobo Std" FontSize="20" Foreground="White"/>
+            <Image x:Name="rectenemigo_Copy" Source="policia.png" Width="23" Height="23" Stretch="Fill" Canvas.Left="68" Canvas.Top="98" />
+            <Image x:Name="rectenemigo_Copy1" Source="policia.png" Width="23" Height="23" Stretch="Fill" Canvas.Left="228" Canvas.Top="169" />
+            <Image x:Name="rectenemigo_Copy2" Source="policia.png" Width="23" Height="23" Stretch="Fill" Canvas.Left="511" Canvas.Top="392" />
+            <Image x:Name="rectenemigo_Copy3" Source="policia.png" Width="23" Height="23" Stretch="Fill" Canvas.Left="845" Canvas.Top="98" />
+            <Image x:Name="rectenemigo_Copy4" Source="policia.png" Width="23" Height="23" Stretch="Fill" Canvas.Left="707" Canvas.Top="447" />
+            <Image x:Name="rectenemigo_Copy5" Source="policia.png" Width="23" Height="23" Stretch="Fill" Canvas.Left="113" Canvas.Top="447" />
 
         </Canvas>
-        <Canvas Name="canvasGameOver" Visibility="Collapsed">
+        <Canvas Name="canvasMenu" Visibility="Collapsed">
+            <TextBlock Text="Game Overr" Canvas.Left="230" Canvas.Top="154" FontSize="72" Foreground="#FFBF3B3B" />
+        </Canvas>
+        <Canvas Name="canvasGameOver" Visibility="Collapsed" Background="White">
             <TextBlock Text="Game Overr" Canvas.Left="230" Canvas.Top="154" FontSize="72" Foreground="#FFBF3B3B" />
         </Canvas>
     </Canvas>

@@ -25,12 +25,18 @@ namespace PracticaMovimiento
 
         Stopwatch stopwatch;
         TimeSpan tiempoAnterior;
-    
+        bool jugando = true;
         /// Jugador //
         Jugador player;
         ///         ///
         /// Enemigos //        
         Enemigo enemigo1;
+        Enemigo enemigo2;
+        Enemigo enemigo3;
+        Enemigo enemigo4;
+        Enemigo enemigo5;
+        Enemigo enemigo6;
+        Enemigo enemigo7;
         ///         ///
         /// Tiles   // 
         Tile tiles1;
@@ -114,24 +120,98 @@ namespace PracticaMovimiento
         Tile tiles80;
         Tile tiles81;
         Tile tiles82;
-        Tile tiles83;
         Tile tiles84;
         Tile tiles86;
+        Tile tiles87;
+        Tile tiles88;
+        Tile tiles89;
         Warp Derecha;
         Warp Izquierda;
         ///         ///
 
+        Dinero Dinero1;
+        Dinero Dinero2;
+        Dinero Dinero3;
+        Dinero Dinero4;
+        Dinero Dinero5;
+        Dinero Dinero6;
+        Dinero Dinero7;
+        Dinero Dinero8;
+        Dinero Dinero9;
+        Dinero Dinero10;
+        Dinero Dinero11;
+        Dinero Dinero12;
+        Dinero Dinero13;
+        Dinero Dinero14;
+        Dinero Dinero15;
+        Dinero Dinero16;
+        Dinero Dinero17;
+        Dinero Dinero18;
+        Dinero Dinero19;
+        Dinero Dinero20;
+        Dinero Dinero21;
+        Dinero Dinero22;
+        Dinero Dinero23;
+        Dinero Dinero24;
+        Dinero Dinero25;
+        Dinero Dinero26;
+        Dinero Dinero27;
+        Dinero Dinero28;
+        Dinero Dinero29;
+        Dinero Dinero30;
+        Dinero Dinero31;
+        Dinero Dinero32;
+        Dinero Dinero33;
+        Dinero Dinero34;
+        Dinero Dinero35;
+        Dinero Dinero36;
+        Dinero Dinero37;
+        Dinero Dinero38;
+        Dinero Dinero39;
+        Dinero Dinero40;
+        Dinero Dinero41;
+        Dinero Dinero42;
+        Dinero Dinero43;
+        Dinero Dinero44;
+        Dinero Dinero45;
+        Dinero Dinero46;
+        Dinero Dinero47;
+        Dinero Dinero48;
+        Dinero Dinero49;
+        Dinero Dinero50;
+        Dinero Dinero51;
+        Dinero Dinero52;
+        Dinero Dinero53;
+        Dinero Dinero54;
+        Dinero Dinero55;
+        Dinero Dinero56;
+        Dinero Dinero57;
+        Dinero Dinero58;
+        Dinero Dinero59;
+        Dinero Dinero60;
+        Dinero Dinero61;
+        Dinero Dinero62;
+        Dinero Dinero63;
+        Dinero Dinero64;
+        Dinero Dinero65;
+        Dinero Dinero66;
 
 
 
-        enum EstadoJuego { Gameplay, Gameover };
+        int puntuacion = 0;
+
+
+        enum EstadoJuego { Gameplay, Gameover,Menu};
         EstadoJuego estadoActual = EstadoJuego.Gameplay;
 
 
+      
 
         List<Enemigo> enemigos = new List<Enemigo>();
 
         List<Tile> tiles = new List<Tile>();
+
+        List<Dinero> Dineros = new List<Dinero>();
 
         public MainWindow()
         {
@@ -143,16 +223,94 @@ namespace PracticaMovimiento
             stopwatch.Start();
             tiempoAnterior = stopwatch.Elapsed;
 
+
            
 
             player = new Jugador(rectjugador);
             
 
             enemigo1 = new Enemigo(rectenemigo);
+            enemigo2 = new Enemigo(rectenemigo_Copy);
+            enemigo3 = new Enemigo(rectenemigo_Copy1);
+            enemigo4 = new Enemigo(rectenemigo_Copy2);
+            enemigo5 = new Enemigo(rectenemigo_Copy3);
+            enemigo6 = new Enemigo(rectenemigo_Copy4);
+            enemigo7 = new Enemigo(rectenemigo_Copy5);
 
             Izquierda = new Warp(IzquierdaWarp);
 
             Derecha = new Warp(DerechaWarp);
+
+          
+
+            Dinero1 = new Dinero(dinero_Copy);
+            Dinero2 = new Dinero(dinero_Copy1);
+            Dinero3 = new Dinero(dinero_Copy2);
+            Dinero4 = new Dinero(dinero_Copy3);
+            Dinero5 = new Dinero(dinero_Copy4);
+            Dinero6 = new Dinero(dinero_Copy5);
+            Dinero7 = new Dinero(dinero_Copy6);
+            Dinero8 = new Dinero(dinero_Copy7);
+            Dinero9 = new Dinero(dinero_Copy8);
+            Dinero10 = new Dinero(dinero_Copy9);
+            Dinero11 = new Dinero(dinero_Copy10);
+            Dinero12 = new Dinero(dinero_Copy11);
+            Dinero13 = new Dinero(dinero_Copy12);
+            Dinero14 = new Dinero(dinero_Copy13);
+            Dinero15 = new Dinero(dinero_Copy14);
+            Dinero16 = new Dinero(dinero_Copy15);
+            Dinero17 = new Dinero(dinero_Copy16);
+            Dinero18 = new Dinero(dinero_Copy17);
+            Dinero19 = new Dinero(dinero_Copy18);
+            Dinero20 = new Dinero(dinero_Copy19);
+            Dinero21 = new Dinero(dinero_Copy20);
+            Dinero22 = new Dinero(dinero_Copy21);
+            Dinero23 = new Dinero(dinero_Copy22);
+            Dinero24 = new Dinero(dinero_Copy23);
+            Dinero25 = new Dinero(dinero_Copy24);
+            Dinero26 = new Dinero(dinero_Copy25);
+            Dinero27 = new Dinero(dinero_Copy26);
+            Dinero28 = new Dinero(dinero_Copy27);
+            Dinero29 = new Dinero(dinero_Copy28);
+            Dinero30 = new Dinero(dinero_Copy29);
+            Dinero31 = new Dinero(dinero_Copy30);
+            Dinero32 = new Dinero(dinero_Copy31);
+            Dinero33 = new Dinero(dinero_Copy32);
+            Dinero34 = new Dinero(dinero_Copy33);
+            Dinero35 = new Dinero(dinero_Copy34);
+            Dinero36 = new Dinero(dinero_Copy35);
+            Dinero37 = new Dinero(dinero_Copy36);
+            Dinero38 = new Dinero(dinero_Copy37);
+            Dinero39 = new Dinero(dinero_Copy38);
+            Dinero40 = new Dinero(dinero_Copy39);
+            Dinero41 = new Dinero(dinero_Copy40);
+            Dinero42 = new Dinero(dinero_Copy41);
+            Dinero43 = new Dinero(dinero_Copy42);
+            Dinero44 = new Dinero(dinero_Copy43);
+            Dinero45 = new Dinero(dinero_Copy44);
+            Dinero46 = new Dinero(dinero_Copy45);
+            Dinero47 = new Dinero(dinero_Copy46);
+            Dinero48 = new Dinero(dinero_Copy47);
+            Dinero49 = new Dinero(dinero_Copy48);
+            Dinero50 = new Dinero(dinero_Copy49);
+            Dinero51 = new Dinero(dinero_Copy50);
+            Dinero52 = new Dinero(dinero_Copy51);
+            Dinero53 = new Dinero(dinero_Copy52);
+            Dinero54 = new Dinero(dinero_Copy53);
+            Dinero55 = new Dinero(dinero_Copy54);
+            Dinero56 = new Dinero(dinero_Copy55);
+            Dinero57 = new Dinero(dinero_Copy56);
+            Dinero58 = new Dinero(dinero_Copy57);
+            Dinero59 = new Dinero(dinero_Copy58);
+            Dinero60 = new Dinero(dinero_Copy59);
+            Dinero61 = new Dinero(dinero_Copy60);
+            Dinero62 = new Dinero(dinero_Copy61);
+            Dinero63 = new Dinero(dinero_Copy62);
+            Dinero64 = new Dinero(dinero_Copy63);
+            Dinero65 = new Dinero(dinero_Copy64);
+            Dinero66 = new Dinero(dinero_Copy65);
+
+
 
             tiles1 = new Tile(tile1);
             tiles2 = new Tile(tile2);
@@ -236,19 +394,25 @@ namespace PracticaMovimiento
             tiles80 = new Tile(tile80);
             tiles81 = new Tile(tile81);
             tiles82 = new Tile(tile82);
-            tiles83 = new Tile(tile83);
+      
             tiles84 = new Tile(tile84);
             tiles86 = new Tile(tile86);
-
-
-
+            tiles87 = new Tile(tile87);
+            tiles88 = new Tile(tile88);
+            tiles89 = new Tile(tile89);
 
 
 
             enemigos.Add(enemigo1);
+            enemigos.Add(enemigo2);
+            enemigos.Add(enemigo3);
+            enemigos.Add(enemigo4);
+            enemigos.Add(enemigo5);
+            enemigos.Add(enemigo6);
+            enemigos.Add(enemigo7);
 
-          
-            
+
+
             tiles.Add(tiles1);
             tiles.Add(tiles2);
             tiles.Add(tiles3);
@@ -330,11 +494,89 @@ namespace PracticaMovimiento
             tiles.Add(tiles80);
             tiles.Add(tiles81);
             tiles.Add(tiles82);
-            tiles.Add(tiles83);
+       
             tiles.Add(tiles84);
             tiles.Add(tiles86);
+            tiles.Add(tiles87);
+            tiles.Add(tiles88);
+            tiles.Add(tiles89);
+
+
+
             tiles.Add(Derecha);
             tiles.Add(Izquierda);
+
+            Dineros.Add(Dinero1);
+            Dineros.Add(Dinero2);
+            Dineros.Add(Dinero3);
+            Dineros.Add(Dinero4);
+            Dineros.Add(Dinero5);
+            Dineros.Add(Dinero6);
+            Dineros.Add(Dinero7);
+            Dineros.Add(Dinero8);
+            Dineros.Add(Dinero9);
+            Dineros.Add(Dinero10);
+            Dineros.Add(Dinero11);
+            Dineros.Add(Dinero12);
+            Dineros.Add(Dinero13);
+            Dineros.Add(Dinero14);
+            Dineros.Add(Dinero15);
+            Dineros.Add(Dinero16);
+            Dineros.Add(Dinero17);
+            Dineros.Add(Dinero18);
+            Dineros.Add(Dinero19);
+            Dineros.Add(Dinero20);
+            Dineros.Add(Dinero21);
+            Dineros.Add(Dinero22);
+            Dineros.Add(Dinero23);
+            Dineros.Add(Dinero24);
+            Dineros.Add(Dinero25);
+            Dineros.Add(Dinero26);
+            Dineros.Add(Dinero27);
+            Dineros.Add(Dinero28);
+            Dineros.Add(Dinero29);
+            Dineros.Add(Dinero30);
+            Dineros.Add(Dinero31);
+            Dineros.Add(Dinero32);
+            Dineros.Add(Dinero33);
+            Dineros.Add(Dinero34);
+            Dineros.Add(Dinero35);
+            Dineros.Add(Dinero36);
+            Dineros.Add(Dinero37);
+            Dineros.Add(Dinero38);
+            Dineros.Add(Dinero39);
+            Dineros.Add(Dinero40);
+            Dineros.Add(Dinero41); 
+            Dineros.Add(Dinero42);
+            Dineros.Add(Dinero43);
+            Dineros.Add(Dinero44);
+            Dineros.Add(Dinero45);
+            Dineros.Add(Dinero46);
+            Dineros.Add(Dinero47);
+            Dineros.Add(Dinero48);
+            Dineros.Add(Dinero49);
+            Dineros.Add(Dinero50);
+            Dineros.Add(Dinero51);
+            Dineros.Add(Dinero52);
+            Dineros.Add(Dinero53);
+            Dineros.Add(Dinero54);
+            Dineros.Add(Dinero55);
+            Dineros.Add(Dinero56);
+            Dineros.Add(Dinero57);
+            Dineros.Add(Dinero58);
+            Dineros.Add(Dinero59);
+            Dineros.Add(Dinero60); 
+            Dineros.Add(Dinero61);
+            Dineros.Add(Dinero62);
+            Dineros.Add(Dinero63);
+            Dineros.Add(Dinero64);
+            Dineros.Add(Dinero65);
+            Dineros.Add(Dinero66);
+        
+
+
+
+
 
             ThreadStart threadStart =
                 new ThreadStart(actualizar);
@@ -348,7 +590,23 @@ namespace PracticaMovimiento
             
         }
 
- 
+
+        void Rockola()
+        {
+            if (estadoActual == EstadoJuego.Gameplay)
+            {
+                MediaPlayer Sound1 = new MediaPlayer();
+                Sound1.Open(new Uri(@"Gameplay.wav"));
+                Sound1.Play();
+            }
+            if (estadoActual == EstadoJuego.Gameover)
+            {
+                MediaPlayer Sound1 = new MediaPlayer();
+                Sound1.Open(new Uri(@"Descubierto.wav"));
+                Sound1.Play();
+            }
+
+        }
 
         void actualizar()
         {
@@ -368,9 +626,10 @@ namespace PracticaMovimiento
                     if (estadoActual == EstadoJuego.Gameplay)
                     {
                        
-             
+          
                         player.Mover(deltaTime);
                         // CHECAR COLISIONES EN TODOS LOS OBJETOS//
+                
                         foreach (Enemigo enemigo in enemigos)
                         {
                             enemigo.Mover(deltaTime);
@@ -381,107 +640,163 @@ namespace PracticaMovimiento
                         player.PosicionY + player.Imagen.Height >= enemigo.PosicionY &&
                         player.PosicionY <= enemigo.PosicionY + enemigo.Imagen.Height)
                             {
-                                lblColision.Text =
-                                    "HAY COLISION!!!";
-                         
+
+                                estadoActual = EstadoJuego.Gameover;
+
                             }
                             else
                             {
-                                lblColision.Text = "NOOO -HAY COLISION!!!";
                             }
-                            foreach (Tile tile in tiles)
+             
+                                foreach (Tile tile in tiles)
+                                {
+                                    if (player.PosicionX + player.Imagen.Width >= tile.PosicionX &&
+                         player.PosicionX <= tile.PosicionX + tile.Imagen.Width &&
+                         player.PosicionY + player.Imagen.Height >= tile.PosicionY &&
+                         player.PosicionY <= tile.PosicionY + tile.Imagen.Height)
+                                    {
+
+
+                                        if (tile.GetType() == typeof(Warp))
+                                        {
+                                            if (tile.Imagen.Name == "DerechaWarp")
+                                            {
+                                                player.PosicionX = player.PosicionX - 850;
+
+                                            }
+                                            else
+                                            {
+                                              
+                                                player.PosicionX = player.PosicionX + 850;
+
+                                            }
+
+
+
+
+                                        }
+
+                                        if (player.DireccionActual == Jugador.Direccion.Derecha)
+                                        {
+
+                                            player.PosicionX = player.PosicionX - 5;
+
+
+
+                                        }
+                                        if (player.DireccionActual == Jugador.Direccion.Izquierda)
+                                        {
+
+                                            player.PosicionX = player.PosicionX + 5;
+                                        }
+                                        if (player.DireccionActual == Jugador.Direccion.Arriba)
+                                        {
+
+                                            player.PosicionY = player.PosicionY + 5;
+
+                                        }
+                                        if (player.DireccionActual == Jugador.Direccion.Abajo)
+                                        {
+
+                                            player.PosicionY = player.PosicionY - 5;
+                                        }
+
+
+                                    }
+                                    if (enemigo.PosicionX + enemigo.Imagen.Width >= tile.PosicionX &&
+                         enemigo.PosicionX <= tile.PosicionX + tile.Imagen.Width &&
+                         enemigo.PosicionY + enemigo.Imagen.Height >= tile.PosicionY &&
+                         enemigo.PosicionY <= tile.PosicionY + tile.Imagen.Height)
+                                    {
+                                        if (tile.GetType() == typeof(Warp))
+                                        {
+                                            if (tile.Imagen.Name == "DerechaWarp")
+                                            {
+                                                enemigo.PosicionX = enemigo.PosicionX - 850;
+
+                                            }
+                                            else
+                                            {
+                                         
+                                                enemigo.PosicionX = enemigo.PosicionX + 850;
+
+                                            }
+
+
+
+
+                                        }
+                                        if (enemigo.DireccionActual == Enemigo.Direccion.Derecha)
+                                        {
+
+                                            enemigo.PosicionX = enemigo.PosicionX - 1;
+                                            enemigo.Random();
+
+
+                                        }
+                                        if (enemigo.DireccionActual == Enemigo.Direccion.Izquierda)
+                                        {
+
+                                            enemigo.PosicionX = enemigo.PosicionX + 1;
+                                            enemigo.Random();
+
+                                        }
+                                        if (enemigo.DireccionActual == Enemigo.Direccion.Arriba)
+                                        {
+
+                                            enemigo.PosicionY = enemigo.PosicionY + 1;
+                                            enemigo.Random();
+
+
+                                        }
+                                        if (enemigo.DireccionActual == Enemigo.Direccion.Abajo)
+                                        {
+
+                                            enemigo.PosicionY = enemigo.PosicionY - 1;
+                                            enemigo.Random();
+
+                                        }
+                                    }
+
+                                }
+                            }
+
+                        foreach (Dinero dinero in Dineros)
+                        {
+                            if (player.PosicionX + player.Imagen.Width >= dinero.PosicionX &&
+                   player.PosicionX <= dinero.PosicionX + dinero.Imagen.Width &&
+                   player.PosicionY + player.Imagen.Height >= dinero.PosicionY &&
+                   player.PosicionY <= dinero.PosicionY + dinero.Imagen.Height)
                             {
-                                if (player.PosicionX + player.Imagen.Width >= tile.PosicionX &&
-                     player.PosicionX <= tile.PosicionX + tile.Imagen.Width &&
-                     player.PosicionY + player.Imagen.Height >= tile.PosicionY &&
-                     player.PosicionY <= tile.PosicionY + tile.Imagen.Height)
-                                {
-                                    lblInterseccionX.Text =
-                                      "HAY COLISION DE TILES ";
-                                    if (tile.GetType() == typeof(Warp))
-                                    {
-                                        player.PosicionX = player.PosicionX - 500;
-                                    }
-                                    if (player.DireccionActual == Jugador.Direccion.Derecha)
-                                    {
-
-                                        player.PosicionX = player.PosicionX - 1;
-                                     
-
-
-                                    }
-                                    if (player.DireccionActual == Jugador.Direccion.Izquierda)
-                                    {
-
-                                        player.PosicionX = player.PosicionX + 1;
-                                    }
-                                    if (player.DireccionActual == Jugador.Direccion.Arriba)
-                                    {
-
-                                        player.PosicionY = player.PosicionY + 1;
-
-                                    }
-                                    if (player.DireccionActual == Jugador.Direccion.Abajo)
-                                    {
-
-                                        player.PosicionY = player.PosicionY - 1;
-                                    }
-
-
-                                }
-                                if (enemigo.PosicionX + enemigo.Imagen.Width >= tile.PosicionX &&
-                     enemigo.PosicionX <= tile.PosicionX + tile.Imagen.Width &&
-                     enemigo.PosicionY + enemigo.Imagen.Height >= tile.PosicionY &&
-                     enemigo.PosicionY <= tile.PosicionY + tile.Imagen.Height)
-                                {
-                                    lblInterseccionY.Text =
-                                        "HAY COLISION DE TILES DEL ENEMIGO!!";
-                                    if (enemigo.DireccionActual == Enemigo.Direccion.Derecha)
-                                    {
-
-                                        enemigo.PosicionX = enemigo.PosicionX - 1;
-                                        enemigo.Random();
-
-
-                                    }
-                                    if (enemigo.DireccionActual == Enemigo.Direccion.Izquierda)
-                                    {
-
-                                        enemigo.PosicionX = enemigo.PosicionX + 1;
-                                        enemigo.Random();
-
-                                    }
-                                    if (enemigo.DireccionActual == Enemigo.Direccion.Arriba)
-                                    {
-
-                                        enemigo.PosicionY = enemigo.PosicionY + 1;
-                                        enemigo.Random();
-
-
-                                    }
-                                    if (enemigo.DireccionActual == Enemigo.Direccion.Abajo)
-                                    {
-
-                                        enemigo.PosicionY = enemigo.PosicionY - 1;
-                                        enemigo.Random();
-
-                                    }
-                                }
+                                
+                                puntuacion = puntuacion + dinero.Puntos;
+                                PuntuacionTotal.Text = "Puntos " + puntuacion;
+                                dinero.Destruir();
+                               
                             }
+                            else
+                            {
+
+                            }
+
 
                         }
 
+                     
 
 
 
-
-
+                        if(puntuacion == 66000)
+                        {
+                            estadoActual = EstadoJuego.Gameover;
+                        }
 
 
 
                     } else if (estadoActual == EstadoJuego.Gameover)
                     {
-
+                        canvasPrincipal.Visibility = Visibility.Collapsed;
+                        canvasGameOver.Visibility = Visibility.Visible;
                     }
 
                     
