@@ -90,27 +90,35 @@ namespace PracticaMovimiento
         }
         public void Random()
         {
-            numerorandom = rnd.Next(0 , 5);
+            numerorandom = rnd.Next(1 ,4 );
             if (numerorandom == 1)
             {
-
-                OrientacionActual = Orientacion.Abajo;
-                DireccionActual = Direccion.Abajo;
+                
+                    OrientacionActual = Orientacion.Abajo;
+                    DireccionActual = Direccion.Abajo;
+                
+          
             }
             if (numerorandom == 2)
             {
-                OrientacionActual = Orientacion.Arriba;
-                DireccionActual = Direccion.Arriba;
+                
+                    OrientacionActual = Orientacion.Arriba;
+                    DireccionActual = Direccion.Arriba;
+                
             }
             if (numerorandom == 3)
             {
-                OrientacionActual = Orientacion.Derecha;
-                DireccionActual = Direccion.Derecha;
+              
+                    OrientacionActual = Orientacion.Derecha;
+                    DireccionActual = Direccion.Derecha;
+                
             }
             if (numerorandom == 4)
             {
-                OrientacionActual = Orientacion.Izquierda;
-                DireccionActual = Direccion.Izquierda;
+               
+                    OrientacionActual = Orientacion.Izquierda;
+                    DireccionActual = Direccion.Izquierda;
+               
             }
 
         }

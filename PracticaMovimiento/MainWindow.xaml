@@ -9,7 +9,7 @@
         >
     <Canvas Background="Black" Margin="0,0,-25,0">
 
-        <Canvas Visibility="Collapsed" Name="canvasPrincipal" KeyDown="canvasPrincipal_KeyDown" KeyUp="canvasPrincipal_KeyUp" Focusable="True" Background="Black">
+        <Canvas Visibility="Visible" Name="canvasPrincipal" KeyDown="canvasPrincipal_KeyDown" KeyUp="canvasPrincipal_KeyUp" Focusable="True" Background="Black">
             <UniformGrid Canvas.Left="10" Width="995">
                 <Image Source="Textura1.png" Height="42" Width="42" Canvas.Left="10" Canvas.Top="53"></Image>
                 <Image Source="Textura1.png" Height="42" Width="42" Canvas.Left="10" Canvas.Top="53"></Image>
@@ -591,7 +591,7 @@
             <Image Name="tile60" Source="Textura2.png" Width="124" Height="31" Canvas.Left="542" Canvas.Top="62" Stretch="Fill"/>
             <Image Name="tile61" Source="Textura2.png" Width="124" Height="31" Canvas.Left="317" Canvas.Top="62" Stretch="Fill"/>
             <Image Name="tile62" Source="Textura2.png" Width="108" Height="71" Canvas.Top="196" Stretch="Fill"  Canvas.Left="10"/>
-            <Image Name="tile63" Source="Textura2.png" Width="129" Height="71" Canvas.Top="194" Stretch="Fill" Canvas.Left="876"/>
+            <Image Name="tile63" Source="Textura2.png" Width="129" Height="67" Canvas.Top="198" Stretch="Fill" Canvas.Left="876"/>
             <Image Name="tile64" Source="Textura2.png" Width="131" Height="73" Canvas.Top="307" Stretch="Fill" Canvas.Left="874"/>
             <Image Name="tile66" Source="Textura2.png" Width="56" Height="31" Canvas.Top="62" Stretch="Fill" Canvas.Left="52"/>
             <Image Name="tile67" Source="Textura2.png" Width="56" Height="31" Canvas.Top="62" Stretch="Fill" Canvas.Left="873"/>
@@ -610,10 +610,10 @@
             <Image Name="tile80" Source="Textura2.png" Width="72" Height="16" Canvas.Top="476" Stretch="Fill" Canvas.Left="-24"/>
             <Image Name="tile81" Source="Textura2.png" Width="72" Height="305" Canvas.Top="307" Stretch="Fill" Canvas.Left="-62"/>
             <Image Name="tile82" Source="Textura2.png" Width="72" Height="309" Canvas.Top="-34" Stretch="Fill" Canvas.Left="-62"/>
-            <Image Name="tile84" Source="Textura2.png" Width="967" Height="60" Canvas.Top="-34" Stretch="Fill" Canvas.Left="15"/>
+            <Image Name="tile84" Source="Textura2.png" Width="960" Height="50" Canvas.Top="-36" Stretch="Fill" Canvas.Left="22"/>
             <Image Name="tile86" Source="Textura2.png" Width="108" Height="71" Canvas.Top="307" Stretch="Fill" Canvas.Left="10"/>
-            <Image Name="tile87" Source="Textura2.png" Width="108" Height="228" Canvas.Top="-34" Stretch="Fill" Canvas.Left="982"/>
-            <Image Name="tile88" Source="Textura2.png" Width="100" Height="418" Canvas.Top="194" Stretch="Fill" Canvas.Left="1005"/>
+            <Image Name="tile87" Source="Textura2.png" Width="108" Height="228" Canvas.Top="-36" Stretch="Fill" Canvas.Left="994"/>
+            <Image Name="tile88" Source="Textura2.png" Width="100" Height="418" Canvas.Top="194" Stretch="Fill" Canvas.Left="1010"/>
             <Image Name="tile89" Source="Textura2.png" Width="995" Height="41" Canvas.Top="587" Stretch="Fill" Canvas.Left="10"/>
 
             <Image Name="DerechaWarp" Source="Textura1.png" Canvas.Left="938" Canvas.Top="265" Height="42" Width="44"></Image>

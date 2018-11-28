@@ -725,32 +725,31 @@ namespace PracticaMovimiento
                                         if (enemigo.DireccionActual == Enemigo.Direccion.Derecha)
                                         {
 
-                                            enemigo.PosicionX = enemigo.PosicionX - 1;
-                                            enemigo.Random();
+                                            enemigo.PosicionX = enemigo.PosicionX - 5;
+                                            
 
 
                                         }
                                         if (enemigo.DireccionActual == Enemigo.Direccion.Izquierda)
                                         {
 
-                                            enemigo.PosicionX = enemigo.PosicionX + 1;
-                                            enemigo.Random();
+                                            enemigo.PosicionX = enemigo.PosicionX + 5;
+                                          
 
                                         }
                                         if (enemigo.DireccionActual == Enemigo.Direccion.Arriba)
                                         {
 
-                                            enemigo.PosicionY = enemigo.PosicionY + 1;
-                                            enemigo.Random();
+                                            enemigo.PosicionY = enemigo.PosicionY + 5;
+                                           
 
 
                                         }
                                         if (enemigo.DireccionActual == Enemigo.Direccion.Abajo)
                                         {
 
-                                            enemigo.PosicionY = enemigo.PosicionY - 1;
-                                            enemigo.Random();
-
+                                            enemigo.PosicionY = enemigo.PosicionY - 5;
+                                           
                                         }
                                     }
 
