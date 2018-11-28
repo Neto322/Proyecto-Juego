@@ -38,10 +38,8 @@ namespace PracticaMovimiento
 
             Puntos = 1000;
 
-
-            rnd = new Random();
-            numerorandom = rnd.Next(0,1);
-            imagen.Source = estado[numerorandom];
+        
+            imagen.Source = estado[1];
 
 
         }

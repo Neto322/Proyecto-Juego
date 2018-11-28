@@ -118,7 +118,9 @@
     <Content Include="GAMEOVER.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Gameplay.wav" />
+    <Content Include="Gameplay.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Grid-pac-man-8970124-1680-1050.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -202,10 +202,9 @@ namespace PracticaMovimiento
 
 
         enum EstadoJuego { Gameplay, Gameover,Menu};
-        EstadoJuego estadoActual = EstadoJuego.Gameplay;
+        EstadoJuego estadoActual = EstadoJuego.Menu;
 
 
-      
 
         List<Enemigo> enemigos = new List<Enemigo>();
 
@@ -310,7 +309,7 @@ namespace PracticaMovimiento
             Dinero65 = new Dinero(dinero_Copy64);
             Dinero66 = new Dinero(dinero_Copy65);
 
-
+       
 
             tiles1 = new Tile(tile1);
             tiles2 = new Tile(tile2);
@@ -572,10 +571,10 @@ namespace PracticaMovimiento
             Dineros.Add(Dinero64);
             Dineros.Add(Dinero65);
             Dineros.Add(Dinero66);
+
+
+
         
-
-
-
 
 
             ThreadStart threadStart =
@@ -595,15 +594,11 @@ namespace PracticaMovimiento
         {
             if (estadoActual == EstadoJuego.Gameplay)
             {
-                MediaPlayer Sound1 = new MediaPlayer();
-                Sound1.Open(new Uri(@"Gameplay.wav"));
-                Sound1.Play();
+            
             }
             if (estadoActual == EstadoJuego.Gameover)
             {
-                MediaPlayer Sound1 = new MediaPlayer();
-                Sound1.Open(new Uri(@"Descubierto.wav"));
-                Sound1.Play();
+             
             }
 
         }
@@ -625,8 +620,9 @@ namespace PracticaMovimiento
 
                     if (estadoActual == EstadoJuego.Gameplay)
                     {
-                       
-          
+
+                        
+
                         player.Mover(deltaTime);
                         // CHECAR COLISIONES EN TODOS LOS OBJETOS//
                 
@@ -763,6 +759,7 @@ namespace PracticaMovimiento
 
                         foreach (Dinero dinero in Dineros)
                         {
+                            
                             if (player.PosicionX + player.Imagen.Width >= dinero.PosicionX &&
                    player.PosicionX <= dinero.PosicionX + dinero.Imagen.Width &&
                    player.PosicionY + player.Imagen.Height >= dinero.PosicionY &&
@@ -795,8 +792,10 @@ namespace PracticaMovimiento
 
                     } else if (estadoActual == EstadoJuego.Gameover)
                     {
+                      
                         canvasPrincipal.Visibility = Visibility.Collapsed;
                         canvasGameOver.Visibility = Visibility.Visible;
+                        PuntuacionTotal2.Text = "Puntos Totales " + puntuacion; 
                     }
 
                     
@@ -844,6 +843,27 @@ namespace PracticaMovimiento
         {
    
             
+        }
+
+        private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            media.Position = TimeSpan.Zero;
+            media.Play();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            canvasMenu.Visibility = Visibility.Collapsed;
+            canvasPrincipal.Visibility = Visibility.Visible;
+            canvasPrincipal.Focus();
+            estadoActual = EstadoJuego.Gameplay;
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+
         }
     }
 }

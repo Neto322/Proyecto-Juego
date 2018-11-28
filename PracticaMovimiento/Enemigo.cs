@@ -46,7 +46,7 @@ namespace PracticaMovimiento
 
             public double tiempoTranscurridoEnSprite = 0;
 
-            double tiempoPorSprite = 1;
+            double tiempoPorSprite = 0.25;
 
             public double tiempoTranscurrido = 0;
 
