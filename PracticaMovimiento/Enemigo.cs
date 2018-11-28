@@ -90,7 +90,7 @@ namespace PracticaMovimiento
         }
         public void Random()
         {
-            numerorandom = rnd.Next(1 ,4 );
+            numerorandom = rnd.Next(1 ,10 );
             if (numerorandom == 1)
             {
                 
