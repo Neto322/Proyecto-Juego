@@ -600,8 +600,8 @@
             <Image Name="tile70" Source="Textura2.png" Width="56" Height="16" Canvas.Top="140" Stretch="Fill" Canvas.Left="52"/>
             <Image Name="tile71" Source="Textura2.png" Width="56" Height="16" Canvas.Top="419" Stretch="Fill" Canvas.Left="52"/>
             <Image Name="tile72" Source="Textura2.png" Width="56" Height="16" Canvas.Top="307" Stretch="Fill" Canvas.Left="207"/>
-            <Image Name="tile73" Source="Textura2.png" Width="56" Height="16" Canvas.Top="251" Stretch="Fill" Canvas.Left="274"/>
-            <Image Name="tile74" Source="Textura2.png" Width="56" Height="16" Canvas.Top="309" Stretch="Fill" Canvas.Left="318"/>
+            <Image Name="tile73" Source="Textura2.png" Width="56" Height="16" Canvas.Top="250" Stretch="Fill" Canvas.Left="274"/>
+            <Image Name="tile74" Source="Textura2.png" Width="56" Height="16" Canvas.Top="307" Stretch="Fill" Canvas.Left="318"/>
             <Image Name="tile75" Source="Textura2.png" Width="56" Height="16" Canvas.Top="307" Stretch="Fill" Canvas.Left="610"/>
             <Image Name="tile76" Source="Textura2.png" Width="72" Height="16" Canvas.Top="419" Stretch="Fill" Canvas.Left="764"/>
             <Image Name="tile77" Source="Textura2.png" Width="72" Height="16" Canvas.Top="419" Stretch="Fill" Canvas.Left="876"/>
@@ -616,9 +616,9 @@
             <Image Name="tile87" Source="Textura2.png" Width="108" Height="168" Canvas.Top="26" Stretch="Fill" Canvas.Left="969"/>
             <Image Name="tile88" Source="Textura2.png" Width="108" Height="234" Canvas.Top="380" Stretch="Fill" Canvas.Left="969"/>
             <Image Name="tile89" Source="Textura2.png" Width="959" Height="27" Canvas.Top="587" Stretch="Fill" Canvas.Left="10"/>
-            <Image Name="enemydirection" Source="bloque1.png" Width="27" Height="27" Canvas.Left="672" Canvas.Top="104"></Image>
 
-
+            <Image Name="DerechaWarp" Source="Textura1.png" Canvas.Left="938" Canvas.Top="265" Height="44" Width="44"></Image>
+            <Image Name="IzquierdaWarp" Source="Textura1.png" Canvas.Top="267" Height="40" Width="40"/>
 
 
 

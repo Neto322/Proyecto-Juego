@@ -117,7 +117,8 @@ namespace PracticaMovimiento
         Tile tiles83;
         Tile tiles84;
         Tile tiles86;
-
+        Warp Derecha;
+        Warp Izquierda;
         ///         ///
 
 
@@ -142,11 +143,16 @@ namespace PracticaMovimiento
             stopwatch.Start();
             tiempoAnterior = stopwatch.Elapsed;
 
+           
 
             player = new Jugador(rectjugador);
             
 
             enemigo1 = new Enemigo(rectenemigo);
+
+            Izquierda = new Warp(IzquierdaWarp);
+
+            Derecha = new Warp(DerechaWarp);
 
             tiles1 = new Tile(tile1);
             tiles2 = new Tile(tile2);
@@ -327,6 +333,8 @@ namespace PracticaMovimiento
             tiles.Add(tiles83);
             tiles.Add(tiles84);
             tiles.Add(tiles86);
+            tiles.Add(Derecha);
+            tiles.Add(Izquierda);
 
             ThreadStart threadStart =
                 new ThreadStart(actualizar);
@@ -390,7 +398,11 @@ namespace PracticaMovimiento
                                 {
                                     lblInterseccionX.Text =
                                       "HAY COLISION DE TILES ";
-                                    if(player.DireccionActual == Jugador.Direccion.Derecha)
+                                    if (tile.GetType() == typeof(Warp))
+                                    {
+                                        player.PosicionX = player.PosicionX - 500;
+                                    }
+                                    if (player.DireccionActual == Jugador.Direccion.Derecha)
                                     {
 
                                         player.PosicionX = player.PosicionX - 1;
