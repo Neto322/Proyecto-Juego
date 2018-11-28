@@ -52,7 +52,7 @@ namespace PracticaMovimiento
 
             Random rnd;
 
-
+      
 
 
 
@@ -89,9 +89,12 @@ namespace PracticaMovimiento
                 PosicionX = Canvas.GetLeft(imagen);
                 PosicionY = Canvas.GetTop(imagen);
 
-                Velocidad = 40;
+                Velocidad = 90;
 
                 rnd = new Random();
+
+            numerorandom = rnd.Next(1, 4);
+
 
 
 

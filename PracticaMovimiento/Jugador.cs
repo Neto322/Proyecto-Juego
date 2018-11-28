@@ -87,7 +87,7 @@ namespace PracticaMovimiento
             PosicionX = Canvas.GetLeft(imagen);
             PosicionY = Canvas.GetTop(imagen);
 
-            Velocidad = 50;
+            Velocidad = 80;
 
 
 
