@@ -726,6 +726,7 @@ namespace PracticaMovimiento
                                         {
 
                                             enemigo.PosicionX = enemigo.PosicionX - 5;
+                                              enemigo.Random();
                                             
 
 
@@ -734,6 +735,7 @@ namespace PracticaMovimiento
                                         {
 
                                             enemigo.PosicionX = enemigo.PosicionX + 5;
+                                              enemigo.Random();
                                           
 
                                         }
@@ -741,6 +743,7 @@ namespace PracticaMovimiento
                                         {
 
                                             enemigo.PosicionY = enemigo.PosicionY + 5;
+                                              enemigo.Random();
                                            
 
 
@@ -749,6 +752,7 @@ namespace PracticaMovimiento
                                         {
 
                                             enemigo.PosicionY = enemigo.PosicionY - 5;
+                                              enemigo.Random();
                                            
                                         }
                                     }
